@@ -1,9 +1,7 @@
-# TodayExtensionDemo
-
 ---
 title: 在Today Extension中引用cocopods导入的第三方库
 date: 2017-07-12 11:32:24
-tags: 自强不息
+tags: Swift
 ---
 直接开始正文。
 
@@ -12,7 +10,7 @@ tags: 自强不息
 ![](/images/2017/today_extension_image2.png)
 在宿主App中创建插件难免会遇到需要公用类的情况，而使用的公用类中也许会用到由cocopods导入的第三方库，今天来创建一个demo记录一下
 
-看大神的博客中讲到插件和宿主APP共享代码需要建立私有 framework，将公用的类在Target Membership选中framework项目,然后分别在宿主App和Today Extension的Build Phases->Link Binary With Libraries中加入framework。如图：
+看大神的博客中讲到插件和宿主APP共享代码需要建立私有 framework，将公用的类在Target Membership选中framework项目。如图：
 ![](/images/2017/today_extension_image4.png)
 
 我建了一个TEKit和ContentView类，初始化两个label，使用SnapKit添加约束。OK，运行一下项目，报错。
